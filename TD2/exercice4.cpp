@@ -35,11 +35,24 @@ Eigen::MatrixXf matrixProduct(const Eigen::MatrixXf &A, const Eigen::MatrixXf &B
 
 int main()
 {
-	
-  Eigen::MatrixXf A = Eigen::MatrixXf::Random(3,4);	
-  Eigen::MatrixXf B = Eigen::MatrixXf::Random(4,4);	
+
+  const unsigned int dimension=1000;		
+  Eigen::MatrixXf A = Eigen::MatrixXf::Random(dimension,dimension);	
+  Eigen::MatrixXf B = Eigen::MatrixXf::Random(dimension,dimension);
+
+  clock_t begin = clock();	
   std::cout << " A x B : \n "<< matrixProduct(A,B) <<std::endl;
+  clock_t end = clock();
+  double tempsCalc = double(end - begin) / CLOCKS_PER_SEC;
+  std::cout << "temps calcul du produit matriciel: " <<tempsCalc <<"s " << std::endl;
+
+
+  clock_t begin2 = clock();
   std::cout << " vérification eigen : \n "<< (matrixProduct(A,B)-(A*B)).norm() <<std::endl;
+  clock_t end2 = clock();
+  double tempsCalc2 = double(end2 - begin2) / CLOCKS_PER_SEC;
+  std::cout << "temps calcul du produit eigen: " <<tempsCalc2 <<"s " << std::endl;
+  
 
   return 0;
 }
