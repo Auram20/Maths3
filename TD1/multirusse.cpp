@@ -41,7 +41,7 @@ return b+residu;
 
 int main()
 {
-	int resultat=multi(-20,-32);
+	int resultat=multi(2,-32);
 	std::cout << "Votre résultat: " << resultat << std::endl;
 	return 1;
 }
