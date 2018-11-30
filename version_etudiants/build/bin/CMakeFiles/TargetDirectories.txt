@@ -1,0 +1,3 @@
+/home/6im2/manik/Bureau/Maths3/version_etudiants/build/bin/CMakeFiles/edit_cache.dir
+/home/6im2/manik/Bureau/Maths3/version_etudiants/build/bin/CMakeFiles/rebuild_cache.dir
+/home/6im2/manik/Bureau/Maths3/version_etudiants/build/bin/CMakeFiles/stabilisation.dir
