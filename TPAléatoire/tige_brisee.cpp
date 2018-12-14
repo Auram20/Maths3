@@ -11,11 +11,12 @@ void tigeBrisee(){
   	{
   	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();	
   	std::default_random_engine generator(seed);
-  	std::uniform_real_distribution<float> uniformRealDistribution(0,5);
+  	std::uniform_real_distribution<double> uniformRealDistribution(1,500);
     
     double x=uniformRealDistribution(generator);
-	double y=uniformRealDistribution(generator);
-	double z=uniformRealDistribution(generator);
+	double y=500-x;
+	double z=500-y+x;
+
 
 		if(x<y+z && y<x+z && z<x+y)
 		{
